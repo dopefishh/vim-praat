@@ -31,6 +31,7 @@ FEATURES                                                 *PraatFeatures*
 
 Sendpraat([message, [timeout, [program]]])
 This sends commands to a Praat instance and will return the returncode
+note that Praat must run in the background.
 
 - message : List of commands to send to praat.
             (default: writeInfoLine: "Hello World!"
@@ -43,6 +44,7 @@ This sends commands to a Praat instance and will return the returncode
 
 RunInPraat([timeout, [program]])
 This writes the current script to file and runs it in a Praat instance
+note that Praat must run in the background.
 
 - timeout : Timeout in seconds. 0 for asynchronous.
 	          (default: 0)
