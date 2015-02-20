@@ -10,7 +10,8 @@ working with [Praat](http://praat.org) script files.
 	git clone git://github.com/dopefishh/vim-praat.git
 
 ###Manual
-Clone this repo in your .vim directory and remove the README.md file.
+Clone the repo and copy all the stuff to your ```~/.vim``` directory except for
+the README
 
 ##Features
 - Syntax highlighting for praat scripts
