@@ -1,0 +1,63 @@
+*praat.txt* Praat syntax highlighting and sendpraat functionality
+ _____                 _    ~
+|  __ \               | |   ~
+| |__) | __ __ _  __ _| |_  ~
+|  ___/ '__/ _` |/ _` | __| ~
+| |   | | | (_| | (_| | |_  ~
+|_|   |_|  \__,_|\__,_|\__| ~
+
+======================================================================
+CONTENTS                                                 *PraatContents*
+
+    1. Usage ................ |PraatFeatures|
+    2. Options .............. |PraatOptions|
+    3. License .............. |PraatLicense|
+    4. About ................ |PraatAbout|
+
+======================================================================
+OPTIONS                                                   *PraatOptions*
+
+Path of the sendpraat executable (default: sendpraat).
+    g:sendpraat_path
+
+======================================================================
+FEATURES                                                 *PraatFeatures*
+
+* Filetype detection for Praat scripts
+
+* Syntax highlighting for Praat scripts
+
+* Sendpraat function to send arbitrary commands to a Praat instance
+
+Sendpraat([message, [timeout, [program]]])
+This sends commands to a Praat instance and will return the returncode
+
+- message : List of commands to send to praat.
+            (default: writeInfoLine: "Hello World!"
+- timeout : Timeout in seconds. 0 for asynchronous.
+	          (default: 0)
+- program : Name of the program.
+	          (default: "praat")
+
+* RunInPraat function to run the current script in a Praat instance
+
+RunInPraat([timeout, [program]])
+This writes the current script to file and runs it in a Praat instance
+
+- timeout : Timeout in seconds. 0 for asynchronous.
+	          (default: 0)
+- program : Name of the program.
+	          (default: "praat")
+
+======================================================================
+LICENCE                                                   *PraatLicence*
+
+"THE BEER-WARE LICENSE" (Revision 42): <mart@martlubbers.net> wrote
+this file. As long as you retain this notice you can do whatever you
+want with this stuff. If we meet some day, and you think this stuff is
+worth it, you can buy me a beer in return. Mart Lubbers.
+
+======================================================================
+ABOUT                                                       *PraatAbout*
+
+Updates and issue tracker on: https://github.com/dopefishh/vim-praat

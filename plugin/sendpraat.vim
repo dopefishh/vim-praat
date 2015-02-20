@@ -1,42 +1,29 @@
+" Vim global plugin for using sendpraat
+" Last change: 2015-02-20
+" Maintainer: Mart Lubbers <mart@marlubbers.net>
+" License: Beerware
+
 " Prevent duplicate loading
 if exists("g:sendpraat_version")
 	finish
 endif
 let g:sendpraat_version="0.1"
-if ! exists("g:sendpraat_path")
+
+" Check for custom sendpraat path
+if !exists("g:sendpraat_path")
 	let g:sendpraat_path = "sendpraat"
 endif
 
+" Function to send a list of commands to a Praat instance
 function! Sendpraat(...)
-	let sp_timeout = 0
-	let sp_program = "praat"
-	if a:0 >= 1 && type(a:1) == type([])
-		let sp_message = a:1
-		if a:0 >= 2 && type(a:2) == type(0)
-			let sp_timeout = a:2
-			if a:0 == 3 && type(a:3) == type("")
-				let sp_program = a:3
-			else
-				echoe "Program should be a string"
-				return
-			endif
-		else
-			echoe "Timeout should be an integer"
-			return
-		endif
-	else
-		echoe "Message should be a list"
-		return
-	endif
-	let commands = [g:sendpraat_path, sp_timeout, sp_program]
-	for i in range(0, len(sp_message)-1)
-		let newmsg = substitute(sp_message[i], '"', '\"', "")
-		call add(commands, join(['"', newmsg, '"'], ""))
+	let s:message = a:0 >= 1 ? a:1 : ['writeInfoLine: "Hello World"']
+	let s:timeout = a:0 >= 2 ? a:2 : 0
+	let s:program = a:0 >= 3 ? a:3 : 'praat'
+	let s:commands = [g:sendpraat_path, s:timeout, s:program]
+	for i in range(0, len(s:message)-1)
+		let s:newmsg = substitute(s:message[i], '"', '\\"', "g")
+		call add(s:commands, join(['"', s:newmsg, '"'], ""))
 	endfor
-	call system(join(commands, " "))
-	if v:shell_error != 0
-		echoe join(["Unsuccessfull with error code:", v:shell_error], " ")
-	else
-		echom "Succesfull"
-	endif
+	call system(join(s:commands, " "))
+	return v:shell_error
 endfunction
