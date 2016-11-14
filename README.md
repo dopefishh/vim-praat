@@ -9,6 +9,9 @@ working with [Praat](http://praat.org) script files.
 	cd ~/.vim/bundle
 	git clone git://github.com/dopefishh/vim-praat.git
 
+###Vim 8.0 pack
+Clone this repo in the `~/.vim/pack/<something>/start/vim-praat` folder
+
 ###Manual
 Clone the repo and copy all the stuff to your ```~/.vim``` directory except for
 the README
