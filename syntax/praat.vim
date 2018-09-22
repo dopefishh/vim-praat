@@ -2,7 +2,7 @@
 " Language: Praat
 " Maintainer: Mart
 " Version: 0.9
-" Latest Revision: 2015-02-18
+" Latest Revision: 2018-09-22
 
 if exists("b:current_syntax")
 	finish
@@ -39,13 +39,16 @@ syn match praatFloat '[-+]\?\d\*\.\d\*'
 syn match praatOperator '\(<>\|[<>!=]=\|[<>+\-*%/]\)'
 syn match praatString '"\(\\.\?"\|[^"]\)*"'
 
-" Comments
-syn match praatComment '#.*$'
+" Identifiers
+" syn match praatIdentifier '[a-z\-A-Z_]\+[$#]\?'
 
 " Functions
-syn match praatFunction '[a-z\-A-Z_]\+$\?(\@='
+syn match praatFunction '[a-z\-A-Z_]\+[$#]\?\s*(\@='
 syn match praatFunction '[a-z\-A-Z_ ]\+: \@='
 syn match praatFunction '[A-Z][ &a-z\-A-Z_]\+\(\.\.\.\|$\)'
+
+" Comments
+syn match praatComment '#.*$'
 
 " Link it
 hi def link praatConditional Conditional
@@ -59,3 +62,4 @@ hi def link praatOperator Operator
 hi def link praatString String
 hi def link praatFunction Function
 hi def link praatObject Type
+hi def link praatIdentifier Identifier
