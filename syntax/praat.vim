@@ -22,16 +22,8 @@ syn keyword praatKeyWord pause system system_nocheck
 syn keyword praatKeyWord select plus minus
 syn keyword praatOperator not and or
 
-" Objects
-syn keyword praatObject ArtWord BarkFilter CC Cepstrum Cochleagram
-syn keyword praatObject DurationTier Excitation Formant FormantTier
-syn keyword praatObject FormantFilter Harmonicity Intensity 
-syn keyword praatObject IntensityTier LFCC LPC LongSound Ltas MFCC
-syn keyword praatObject Manipulation Matrix MelFilter ParamCurve
-syn keyword praatObject Pitch PitchTier PointProcess Polygon Sequence
-syn keyword praatObject Sequence Sound Speaker Spectrogram Spectrum
-syn keyword praatObject SpellingChecker Strings TableOfReal TextGrid
-syn keyword praatObject TextTier Wavelet WordList Table
+" Objects (http://www.fon.hum.uva.nl/praat/manual/Types_of_objects.html)
+syn keyword praatObject AmplitudeTier Articulation Artword BarkSpectrogram Categories CC Cepstrum ChebyshevSeries ClassificationTable Cochleagram Configuration Confusion ContingencyTable Correlation Covariance CrossCorrelationTable CrossCorrelationTableList Dinstance Discriminant Dissimilarity Distributions DTW DurationTier EditCostsTable EditDistanceTable Eigen Excitation Exitation Exitations ExperimentMFC FeatureWeights FFNet Formant FormantGrid Harmonicity Intensity IntensityTier ISpline KNN LegendreSeries LFCC LongSound LongSoundEditor LPC Ltas Manipulation ManipulationEditor Matrix MelSpectrogram MFCC MixingMatrix MSpline OTGrammar OTGrammarEditor PairDistribution ParamCurve PatternList PCA Permutation Picture window Pitch PitchEditor PitchTier PitchTierEditor PointEditor PointProcess Polygon Polynomial Roots Salience ScalarProduct Similarity Sound Speaker Spectrogram Spectrum SpectrumEditor SpellingChecker SSCP Strings Table TableOfReal TextGrid TextGridEditor VocalTract VocalTractTier Voice Weight WordList
 
 " Numbers and operators and strings
 syn match praatNumber '[-+]\?\d\+'

@@ -4,13 +4,17 @@ vim-praat
 vim-praat is a plugin for vim to add some handy functionality when you're
 working with [Praat](http://praat.org) script files.
 
+## Todo
+
+Make a decisive list of object types for the syntax highlighting
+
 ## Installation
 ### Pathogen
 
 	cd ~/.vim/bundle
 	git clone git://github.com/dopefishh/vim-praat.git
 
-### Vim 8.0 pack
+### Vim >= 8.0 pack
 Clone this repo in the `~/.vim/pack/<something>/start/vim-praat` folder
 
 ### Manual
