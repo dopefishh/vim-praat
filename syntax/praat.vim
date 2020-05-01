@@ -40,7 +40,7 @@ syn match praatFunction '[a-z\-A-Z_ ]\+: \@='
 syn match praatFunction '[A-Z][ &a-z\-A-Z_]\+\(\.\.\.\|$\)'
 
 " Comments
-syn match praatComment '#.*$'
+syn match praatComment '^\s*#.*$'
 
 " Link it
 hi def link praatConditional Conditional
